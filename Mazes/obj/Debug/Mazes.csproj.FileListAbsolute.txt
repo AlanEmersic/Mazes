@@ -1,0 +1,7 @@
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\bin\Debug\Mazes.exe.config
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\bin\Debug\Mazes.exe
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\bin\Debug\Mazes.pdb
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\obj\Debug\Mazes.csprojAssemblyReference.cache
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\obj\Debug\Mazes.csproj.CoreCompileInputs.cache
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\obj\Debug\Mazes.exe
+C:\Alan\Development\Visual Studio 2019\C#\Mazes\Mazes\obj\Debug\Mazes.pdb
