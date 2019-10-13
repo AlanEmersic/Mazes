@@ -48,6 +48,7 @@
     <Compile Include="Algorithms\BinaryTree.cs" />
     <Compile Include="Algorithms\Ellers.cs" />
     <Compile Include="Algorithms\GrowingTree.cs" />
+    <Compile Include="Algorithms\Houstons.cs" />
     <Compile Include="Algorithms\HuntAndKill.cs" />
     <Compile Include="Algorithms\Kruskals.cs" />
     <Compile Include="Algorithms\Prims.cs" />

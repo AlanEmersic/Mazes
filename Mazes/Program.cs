@@ -13,7 +13,7 @@ namespace Mazes
         enum Algorithm
         {
             AldousBroder, BinaryTree, HuntAndKill, RecursiveBacktracker, Sidewinder,
-            Wilsons, Prims, TruePrims, Kruskals, GrowingTree, RecursiveDivision, Ellers
+            Wilsons, Prims, TruePrims, Kruskals, GrowingTree, RecursiveDivision, Ellers, Houstons
         }
 
         enum MazeType
@@ -24,10 +24,11 @@ namespace Mazes
         static void Main()
         {
             //ColoredGrid(50);
-            //PolarGrid(7);
+            NormalGrid(10);
+            //PolarGrid(5);
             //HexGrid(5);
             //TriangleGrid(10, 15);
-            RandomMaze(10);
+            //RandomMaze(10);
         }
 
         static void ColoredGrid(int size)
@@ -114,12 +115,28 @@ namespace Mazes
             process.Close();
         }
 
+        static void NormalGrid(int size)
+        {
+            Random random = new Random();
+            int seed = random.Next(int.MinValue, int.MaxValue);
+            Grid grid = new Grid(size, size, seed);
+            Houstons.CreateMaze<Grid, Cell>(grid);
+            Bitmap img = grid.ToPNG(50);
+            string name = "Maze.png";
+            img.Save(name);
+
+            Process process = new Process();
+            process.StartInfo.FileName = name;
+            process.Start();
+            process.Close();
+        }
+
         static void PolarGrid(int size)
         {
             Random random = new Random();
             int seed = random.Next(int.MinValue, int.MaxValue);
             PolarGrid grid = new PolarGrid(size, seed);
-            RecursiveBacktracker.CreateMaze<PolarGrid, PolarCell>(grid);
+            Houstons.CreateMaze<PolarGrid, PolarCell>(grid);
             Bitmap img = grid.ToPNG(50);
             string name = "Maze.png";
             img.Save(name);
@@ -191,6 +208,8 @@ namespace Mazes
                 case Algorithm.RecursiveDivision: return RecursiveDivision.CreateMaze(grid) as G;
 
                 case Algorithm.Ellers: return Ellers.CreateMaze(grid) as G;
+
+                case Algorithm.Houstons: return Houstons.CreateMaze<G, T>(grid as G);
             }
             return null;
         }

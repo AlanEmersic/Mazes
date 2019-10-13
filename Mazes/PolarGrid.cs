@@ -15,8 +15,7 @@ namespace Mazes
             get
             {
                 if (row < 0 || row >= Rows || col < 0) return null;
-                //if (col < 0 || col >= Cells[row].Length) return null;
-                //Console.WriteLine($"col:{col} mod:{col % Cells[row].Length}");                
+                //if (col < 0 || col >= Cells[row].Length) return null;                
                 return Cells[row][col % Cells[row].Length] as PolarCell;
             }
         }
@@ -80,7 +79,7 @@ namespace Mazes
             Brush background = Brushes.White;
             float penWidth = cellSize * 0.1f;
             Pen wall = new Pen(Brushes.Black, penWidth);
-
+            
             Bitmap mazeImg = new Bitmap(imgSize + 1, imgSize + 1);
             int center = imgSize / 2;
 
