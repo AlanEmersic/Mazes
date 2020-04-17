@@ -22,7 +22,7 @@ namespace Mazes.Algorithms
                     int set = setForCell.Count;
                     setForCell[cell] = set;
                     cellsInSet[set] = new List<Cell>() { cell };
-                    //FIX
+                    
                     if (cell.South != null)
                     {
                         Neighbors.Add(new KeyValuePair<Cell, Cell>(cell, cell.South));
