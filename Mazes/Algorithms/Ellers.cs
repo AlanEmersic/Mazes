@@ -21,8 +21,10 @@ namespace Mazes.Algorithms
             public void Record(int set, Cell cell)
             {
                 setForCell[cell.Column] = set;
+                
                 if (!cellsInSet.ContainsKey(set))
                     cellsInSet[set] = new List<Cell>();
+                
                 cellsInSet[set].Add(cell);
             }
 
